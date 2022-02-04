@@ -1,0 +1,164 @@
+/* 학습화면 배경 */
+
+.bg-warm {
+    background-color: #f9f2e8 !important;
+    background-image: url('https://wcfresource.a1edu.com/newsystem/AppMobile/eBookSkin/K/Cover5/main_photo.png?ver=1641368081186');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-red {
+    background-color: #ef7373 !important;
+}
+
+.bg-yellow {
+    background-color: #f7b500 !important;
+}
+
+.bg-green {
+    background-color: #44d7b6 !important;
+}
+
+.bg-blue {
+    background-color: #32c5ff !important;
+}
+
+.bg-purple {
+    background-color: #6236ff !important;
+}
+
+.bg-study {
+    background-image: url('../image/pattern/brillant.png');
+    background-repeat: repeat;
+}
+
+.bg-review {
+    background-image: url('../image/pattern/brillant.png');
+    background-repeat: repeat;
+}
+
+.bg-wood {
+    background-image: url('../image/pattern/purty_wood.png');
+    background-repeat: repeat;
+}
+
+.bg-work {
+    background-image: url('../image/pattern/email-pattern.png');
+    background-repeat: repeat;
+}
+
+.bg-geometry {
+    background-image: url('../image/pattern/geometry2.png');
+    background-repeat: repeat;
+}
+
+.bg-doddles {
+    background-image: url('../image/pattern/doodles.png');
+    background-repeat: repeat;
+}
+
+.bg-dot {
+    background-image: url('../image/pattern/dot-grid.png');
+    background-repeat: repeat;
+}
+
+.bg-season {
+    background-image: url('../image/pattern/blue-snow.png');
+    background-repeat: repeat;
+}
+
+/* 학습창 배경 */
+
+.bg-item {
+    border: 1px solid #f0f2f5;
+}
+
+.quiz-container.basic {
+    /* background-color: rgba(17, 153, 238, 0.1); */
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.bg-item.basic {
+    /* background-color: rgba(17, 153, 238, 0.1); */
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.quiz-container.space {
+    background-image: url('../image/background_img/bg_space.png');
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-item.space {
+    background-image: url('../image/background_img/bg_space.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz-container.grass {
+    background-image: url('../image/background_img/bg_grass.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-item.grass {
+    background-image: url('../image/background_img/bg_grass.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz-container.night-sky {
+    background-image: url('../image/background_img/bg_night_sky.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-item.night-sky {
+    background-image: url('../image/background_img/bg_night_sky.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz-container.table {
+    background-image: url('../image/background_img/bg_table.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-item.table {
+    background-image: url('../image/background_img/bg_table.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz-container.wood {
+    background-image: url('../image/background_img/bg_wood.png');
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-item.wood {
+    background-image: url('../image/background_img/bg_wood.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz-container.review {
+    background-color: rgba(238, 179, 17, 0.1);
+    backdrop-filter: blur(50px);
+}

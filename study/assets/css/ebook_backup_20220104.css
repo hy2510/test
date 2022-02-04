@@ -1,0 +1,342 @@
+body {
+    position: relative;
+}
+
+.t {
+    line-height: 1;
+    position: absolute;
+    transform-origin: top left;
+    transform: scale(0.25);
+    -webkit-transform-origin: top left;
+    -webkit-transform: scale(0.25);
+    -moz-transform-origin: top left;
+    -moz-transform: scale(0.25);
+    -o-transform-origin: top left;
+    -o-transform: scale(0.25);
+    -ms-transform-origin: top left;
+    -ms-transform: scale(0.25);
+    z-index: 2;
+    white-space: nowrap;
+    overflow: no-display;
+}
+
+.bg-001 {
+    background-image: url('https://wcfresource.a1edu.com/newsystem/AppMobile/eBookSkin/K/Cover5/main_photo.png?ver=1641201650930');
+    background-position: center;
+    background-size: cover;
+}
+
+.ebook {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 575px) {
+    .ebook {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .ebook {
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+    .ebook {
+        width: 80%;
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1024px) {
+    .ebook {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .ebook {
+        max-width: 800px;
+    }
+}
+
+.ebook-container {
+    display: flex;
+    transform-origin: 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #f0f2f5;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.3)
+}
+
+@media screen and (max-width: 575px) {
+    .ebook-container {
+        display: flex;
+        transform-origin: 0 0;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        border-radius: 0px;
+        background-color: #f0f2f5;
+        box-shadow: none
+    }
+}
+
+.page {
+    position: relative;
+}
+
+.page .text {
+    position: absolute;
+}
+
+.slick-prev {
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url('../image/icons/player/arrow-left.svg');
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 100px;
+    text-indent: -9999px;
+}
+
+.slick-next {
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url('../image/icons/player/arrow-right.svg');
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 100px;
+    text-indent: -9999px;
+}
+
+.player {
+    width: 90%;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: rgba(187, 199, 211, 0.2);
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 575px) {
+    .player {
+        margin: 8px 0px 0px 0px;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: scale(0.84);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 959px) {
+    .player {
+        margin: 15px 0px 0px 0px;
+        padding: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: scale(0.9);
+    }
+}
+
+@media (min-width: 960px) {
+    .player {
+        display: none;
+    }
+
+    .player-s {
+        display: block !important;
+    }
+}
+
+.player-s {
+    display: none;
+}
+
+.player-left {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.player-center {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.player-left img,
+.story .player-right img {
+    width: 30px;
+}
+
+.story .player-center img {
+    width: 40px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 3px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+}
+
+.bg-item {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.word-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.word-item:nth-last-child(1) {
+    margin-bottom: 0px !important;
+}
+
+.word-item p {
+    font-size: 24px;
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 5px 10px 5px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.menu-item img {
+    margin-right: 10px;
+    width: 20px;
+    
+}
+
+.menu-item.opasity {
+    opacity: 0.2;
+}
+
+#modal-movie .modal-dialog {
+    max-width: 920px!important;
+}
+
+.embed-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}

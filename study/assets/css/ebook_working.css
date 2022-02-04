@@ -1,0 +1,320 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t {
+    line-height: 1;
+    position: absolute;
+    transform-origin: top left;
+    transform: scale(0.25);
+    -webkit-transform-origin: top left;
+    -webkit-transform: scale(0.25);
+    -moz-transform-origin: top left;
+    -moz-transform: scale(0.25);
+    -o-transform-origin: top left;
+    -o-transform: scale(0.25);
+    -ms-transform-origin: top left;
+    -ms-transform: scale(0.25);
+    z-index: 2;
+    white-space: nowrap;
+    overflow: no-display;
+}
+
+.bg-001 {
+    background-image: url('https://wcfresource.a1edu.com/newsystem/AppMobile/eBookSkin/K/Cover5/main_photo.png?ver=1641201650930');
+    background-position: center;
+    background-size: cover;
+}
+
+.ebook {
+    position: relative;
+}
+
+.ebook.opasity {
+    opacity: 0;
+}
+
+.eb-title {
+    background-color: #0000009a;
+    padding: 5px 10px 5px 10px;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.ebook-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.3)
+}
+
+@media screen and (max-width: 768px) {
+    .ebook-container {
+        overflow: hidden;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.page {
+    position: relative;
+}
+
+.page .text {
+    position: absolute;
+}
+
+.slick-prev {
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url('../image/icons/player/arrow-left.svg');
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 100px;
+    text-indent: -9999px;
+}
+
+.slick-next {
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url('../image/icons/player/arrow-right.svg');
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 100px;
+    text-indent: -9999px;
+}
+
+.slick-slide div {
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .player-s {
+        position: relative;
+    }
+
+    .player-s .left {
+        position: absolute;
+        right: -54px;
+        bottom: 200px;
+    }
+
+    .player-s .left .item:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+
+    .player-s .right {
+        position: absolute;
+        right: -54px;
+        bottom: 100px;
+    }
+
+    .player-s .right .item:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .player-s .center {
+        position: absolute;
+        right: -60px;
+        bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .player-s {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .player-s .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .player-s .left .item:nth-child(1),
+    .player-s .right .item:nth-child(1) {
+        margin-right: 20px;
+    }
+
+
+    .player-s .right {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.player-s .item img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.player-s .center img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: black;
+}
+
+.bg-item {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.word-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.word-item:nth-last-child(1) {
+    margin-bottom: 0px !important;
+}
+
+.word-item p {
+    font-size: 24px;
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 5px 10px 5px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.menu-item img {
+    margin-right: 10px;
+    width: 20px;
+
+}
+
+.menu-item.opasity {
+    opacity: 0.2;
+}
+
+#modal-movie .modal-dialog {
+    max-width: 920px !important;
+}
+
+.embed-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.animate__animated.animate__backInUp {
+    --animate-duration: 0.8s;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: inherit;
+}
