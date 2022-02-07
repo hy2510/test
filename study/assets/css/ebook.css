@@ -1,3 +1,205 @@
+/* 폰트 */
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NanumSquareRound";
+    font-style: normal;
+    font-weight: 800;
+    src: local("../font/NanumSquareRoundEB"),
+        /* computer */
+        url("../font/NanumSquareRoundEB.eot"),
+        /* IE9 Compat Modes */
+        url("../font/NanumSquareRoundEB.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../font/NanumSquareRoundEB.woff2") format("woff2"),
+        /* Modern Browsers */
+        url("../font/NanumSquareRoundEB.woff") format("woff"),
+        /* Modern Browsers */
+        url("../font/NanumSquareRoundEB.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSansCJKkr-Light";
+    font-style: normal;
+    font-weight: 300;
+    src: local("txt/NotoSansCJKkr-Light"),
+        /* computer */
+        url("../font/NotoSansCJKkr-Light.eot"),
+        /* IE9 Compat Modes */
+        url("../font/NotoSansCJKkr-Light.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../font/NotoSansCJKkr-Light.woff") format("woff"),
+        /* Modern Browsers */
+        url("../font/NotoSansCJKkr-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NotoSansCJKkr-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("../font/NotoSansCJKkr-Bold"),
+        /* computer */
+        url("../font/NotoSansCJKkr-Bold.eot"),
+        /* IE9 Compat Modes */
+        url("../font/NotoSansCJKkr-Bold.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../font/NotoSansCJKkr-Bold.woff") format("woff"),
+        /* Modern Browsers */
+        url("../font/NotoSansCJKkr-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "YDVYGO25";
+    font-style: normal;
+    src: local("../assets/font/YDVYGO25.ttf"),
+        /* computer */
+        url("../font/YDVYGO25.eot"),
+        /* Modern Browsers */
+        url("../font/YDVYGO25.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MinionPro-Regular";
+    font-style: normal;
+    src: local("../font/MinionPro-Regular.ttf"),
+        /* computer */
+        url("../font/MinionPro-Regular.eot"),
+        /* Modern Browsers */
+        url("../font/MinionPro-Regular.ttf") format("truetype");
+}
+
+a {
+    text-decoration: none;
+}
+
+/* bg color */
+
+.bg-level-pk {
+    background-color: #2ECC49 !important;
+}
+
+.bg-level-ka {
+    background-color: #fbce2a !important;
+}
+
+.bg-level-kb {
+    background-color: #fbb424 !important;
+}
+
+.bg-level-kc {
+    background-color: #fa982c !important;
+}
+
+.bg-level-1a {
+    background-color: #f76b1f !important;
+}
+
+.bg-level-1b {
+    background-color: #f55030 !important;
+}
+
+.bg-level-1c {
+    background-color: #ef364c !important;
+}
+
+.bg-level-2a {
+    background-color: #b1cb04 !important;
+}
+
+.bg-level-2b {
+    background-color: #75cb04 !important;
+}
+
+.bg-level-2c {
+    background-color: #43bd4b !important;
+}
+
+.bg-level-3a {
+    background-color: #48bcb7 !important;
+}
+
+.bg-level-3b {
+    background-color: #45b1d0 !important;
+}
+
+.bg-level-3c {
+    background-color: #449ddb !important;
+}
+
+.bg-level-4a {
+    background-color: #8a78d8 !important;
+}
+
+.bg-level-4b {
+    background-color: #a95ed5 !important;
+}
+
+.bg-level-4c {
+    background-color: #b052b1 !important;
+}
+
+.bg-level-5a {
+    background-color: #aa874e !important;
+}
+
+.bg-level-5b {
+    background-color: #835c2e !important;
+}
+
+.bg-level-5c {
+    background-color: #684723 !important;
+}
+
+.bg-level-6a {
+    background-color: #7c7b7b !important;
+}
+
+.bg-level-6b {
+    background-color: #504e4f !important;
+}
+
+.bg-level-6c {
+    background-color: #504e4f !important;
+}
+
+.bg-fail {
+    background-color: #C4C5C5 !important;
+}
+
+/* 공통요소 */
+
+textarea:focus {
+    outline: none !important;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+input:focus {
+    outline: none !important;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -308,4 +510,122 @@ body {
     transform: translate(-50%, -50%);
     width: 300px;
     z-index: inherit;
+}
+
+/* 모달 */
+.modal-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px !important;
+    border: 1px solid #222;
+}
+
+.modal-title {
+    box-sizing: border-box;
+    width: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px 3px 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300
+}
+
+.modal-header {
+    padding: 0px 0px 20px 0px !important;
+    border: 0px !important;
+}
+
+.modal-body {
+    padding: 0px !important;
+    border: 0px !important;
+}
+
+.box-option {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    background-color: #f0f2f5;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.box-option:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.bg-item {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* 폼 스타일 */
+
+.form-check {
+    margin: 5px;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: 0.4rem !important;
+    margin-left: -1.25rem;
+}
+
+.bg-check {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+}
+
+.bg-check.ckecked {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 1) !important;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+}
+
+/* 퀴즈 스타일 */
+
+.main-container {
+    height: 100vh;
+    padding: 20px 20px 0px 20px;
+}
+
+.main-container .ani-show {
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@media (min-width: 1024px) {
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* 버튼 */
+.btn-primary {
+    border-radius: 12px !important;
+    min-height: 44px;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 0.1;
 }
