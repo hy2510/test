@@ -636,6 +636,8 @@ input:focus {
     border: 2px solid #e96060;
     -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
     animation: pulsate-fwd 1s ease-in-out infinite both;
+    /* -webkit-animation: ping 0.8s ease-in-out infinite both;
+    animation: ping 0.8s ease-in-out infinite both; */
 }
 
 .btn-sound-s {
@@ -963,8 +965,13 @@ input:focus {
     border: 1px solid #000000;
     border-radius: 20px;
     box-shadow: 0px 0px 20px #00000080;
-    -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+
+    /* -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; */
+    /* -webkit-animation: bounce-in-top 0.8s both;
+    animation: bounce-in-top 0.8s both; */
+    -webkit-animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .edit-window.active {
@@ -979,8 +986,10 @@ input:focus {
     border: 1px solid #000000;
     border-radius: 20px;
     box-shadow: 0px 0px 20px #00000080;
-    -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    /* -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; */
+    -webkit-animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .test-result.active {
@@ -2610,4 +2619,8 @@ input:focus {
     font-family: baloo thambi;
     color: #ffffff;
     margin-right: 10px;
+}
+
+.modal-delete {
+    cursor: pointer;
 }

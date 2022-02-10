@@ -285,7 +285,7 @@ $('#popup').html(`
             <div class="style-title">
                 <div class="title mb-3 mr-3 text-truncate"><span>Window Theme</span>
                 </div>
-                <div><img src="../../assets/image/icons/x.svg" alt=""></div>
+                <div class="modal-delete"><img src="../../assets/image/icons/x.svg" alt=""></div>
             </div>
             <!--! 스타일(배경)고르기 -->
             <div class="style-list d-flex flex-column justify-content-between">
@@ -411,7 +411,7 @@ $('#popup').html(`
                 <div class="title mb-3 mr-3 text-truncate"><span class="mr-1">EB-KB-005</span><span
                         class="mr-1">/</span><span>The Saling</span>
                 </div>
-                <div><img src="../../assets/image/icons/x.svg" alt=""></div>
+                <div class="modal-delete"><img src="../../assets/image/icons/x.svg" alt=""></div>
             </div>
             <!--! Step 정보 -->
             <div class="step-list">
@@ -626,3 +626,12 @@ $('#seasonTheme').html(`
 		</div>
 	</div>
 `)
+
+// 효과음
+let 효과음 = {
+    정답: '../../assets/audio/answer_correct.mp3',
+    오답: '../../assets/audio/answer_incorrect.mp31',
+    리뷰: 1,
+    넥스트: 1,
+    팝업: '../../assets/audio/리딩게이트_1안.mp3',
+}
