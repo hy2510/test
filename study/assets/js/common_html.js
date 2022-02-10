@@ -633,5 +633,51 @@ let 효과음 = {
     오답: '../../assets/audio/answer_incorrect.mp31',
     리뷰: 1,
     넥스트: 1,
-    팝업: '../../assets/audio/리딩게이트_1안.mp3',
+    팝업: '../../assets/audio/pop.mp3',
 }
+
+// 문제를 틀렸을 때 하트차감 효과
+let 하트갯수 = $('.heart').length;
+
+function 하트차감() {
+    $('.heart').eq(하트갯수 - 1).addClass('delete');
+    하트갯수 = 하트갯수 - 1;
+};
+
+// 모달
+let 모달배경 = $('.item-container');
+let 팝업오디오 = new Audio(효과음.팝업)
+
+// 테마변경모달 실행
+$('.setting').on('click', function () {
+    팝업오디오.play();
+    모달배경.addClass('active');
+    $('.edit-window').addClass('active');
+});
+
+// 학습정보모달 실행
+$('.book-info').on('click', function () {
+    팝업오디오.play();
+    모달배경.addClass('active');
+    $('.study-info').addClass('active')
+});
+
+// 모달 닫기
+$('.modal-delete').on('click', function () {
+    팝업오디오.load();
+    모달배경.removeClass('active');
+    $('.edit-window').removeClass('active');
+    $('.study-info').removeClass('active');
+});
+
+// 사운드버튼 재생 및 효과
+let 오디오파일 = 'https://wcfresource.a1edu.com/newsystem/sound/words/moon.mp3';
+let 오디오소스 = new Audio(오디오파일);
+let 사운드재생중지 = function () {
+    $('.btn-sound').removeClass('active')
+};
+$('.btn-sound').on('click', function () {
+    $('.btn-sound').addClass('active');
+    오디오소스.play();
+    setTimeout(사운드재생중지, 오디오소스.duration * 1000);
+});
