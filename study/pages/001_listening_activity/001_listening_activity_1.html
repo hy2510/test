@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Listening Activity 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Thambi">
+    <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/ani.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--! 퀴즈출제 영역 -->
+    <div class="main-container bg-season">
+        <div class="w-100">
+            <!--! 퀴즈타이틀 -->
+            <div id="quizTitle"></div>
+            <!--! 퀴즈풀기 (- ani-show) -->
+            <div class="quiz-container basic">
+                <!--! 퀴즈정보 -->
+                <div id="quizInfo"></div>
+                <!--! 퀴즈문제 -->
+                <div class="quiz">
+                    <!--! 음원듣기 -->
+                    <div class="listening-activity-listen col-12">
+                        <!--! 사운드재생 (- active) -->
+                        <button class="btn-sound">
+                            <img src="../../assets/image/icons/volume-2.svg" alt="" width="30" height="30">
+                        </button>
+                    </div>
+                    <!--! 정답고르기 -->
+                    <div class="listening-activity-choose col-12">
+                        <div class="box">
+                            <div class="item col-6 col-md-4">
+                                <!--! 정답인 경우 (- correct) (img - opacity-1) -->
+                                <div class="quiz-answer correct"><img
+                                        src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/fly.png" alt=""
+                                        class="opacity-1">
+                                    <div class="word"><span>fly</span></div>
+                                </div>
+                            </div>
+                            <div class="item col-6 col-md-4">
+                                <!--! 오답인 경우 (- incorrect) -->
+                                <div class="quiz-answer incorrect"><img
+                                        src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/alien.png"
+                                        alt=""></div>
+                            </div>
+                            <div class="item col-6 col-md-4">
+                                <div class="quiz-answer"><img
+                                        src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/star.png"
+                                        alt=""></div>
+                            </div>
+                            <div class="item col-6 col-md-4">
+                                <div class="quiz-answer"><img
+                                        src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/moon.png"
+                                        alt=""></div>
+                            </div>
+                            <div class="item col-6 col-md-4">
+                                <div class="quiz-answer"><img
+                                        src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/sun.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--! 퀴즈스코어 -->
+            <div id="quizScore"></div>
+        </div>
+    </div>
+    <!--! 각종팝업 -->
+    <div id="popup"></div>
+    <!--! 시즌테마 -->
+    <div id="seasonTheme"></div>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/popper.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/common_html.js"></script>
+</body>
+
+</html>
