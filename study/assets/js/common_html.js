@@ -633,7 +633,7 @@ let 효과음 = {
     오답: '../../assets/audio/answer_incorrect.mp31',
     리뷰: 1,
     넥스트: 1,
-    팝업: '../../assets/audio/hello.mp3',
+    팝업: '../../assets/audio/pop2.mp3',
 }
 
 // 문제를 틀렸을 때 하트차감 효과
