@@ -15,12 +15,12 @@
 
 <body>
     <!--! 퀴즈출제 영역 -->
-    <div class="main-container bg-season">
+    <div id="Main" class="main-container bg-season">
         <div class="w-100">
             <!--! 퀴즈타이틀 -->
             <div id="quizTitle"></div>
             <!--! 퀴즈풀기 (- ani-show) -->
-            <div class="quiz-container basic">
+            <div id="Quiz" class="quiz-container basic">
                 <!--! 퀴즈정보 -->
                 <div id="quizInfo"></div>
                 <!--! 퀴즈문제 -->
@@ -36,32 +36,39 @@
                     <div class="listening-activity-choose col-12">
                         <div class="box">
                             <div class="item col-6 col-md-4">
-                                <!--! 정답인 경우 (- correct) (img - opacity-1) -->
+                                <!--! 정답, 오답체크 (- correct, incorrect) (img - opacity-1) -->
                                 <div class="quiz-answer correct"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/fly.png" alt=""
                                         class="opacity-1">
-                                    <div class="word"><span>fly</span></div>
+                                    <div id="ex01" class="word">fly</div>
                                 </div>
                             </div>
                             <div class="item col-6 col-md-4">
-                                <!--! 오답인 경우 (- incorrect) -->
-                                <div class="quiz-answer incorrect"><img
+                                <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/alien.png"
-                                        alt=""></div>
+                                        alt="">
+                                    <div id="ex02" class="word d-none">alien</div>
+                                </div>
+
                             </div>
                             <div class="item col-6 col-md-4">
                                 <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/star.png"
-                                        alt=""></div>
+                                        alt="">
+                                    <div id="ex03" class="word d-none">star</div>
+                                </div>
                             </div>
                             <div class="item col-6 col-md-4">
                                 <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/moon.png"
-                                        alt=""></div>
+                                        alt="">
+                                    <div id="ex04" class="word d-none">moon</div>
+                                </div>
                             </div>
                             <div class="item col-6 col-md-4">
                                 <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/sun.png" alt="">
+                                    <div id="ex05" class="word d-none">sun</div>
                                 </div>
                             </div>
                         </div>
@@ -80,6 +87,9 @@
     <script src="../../assets/js/popper.js"></script>
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/common_html.js"></script>
+    <script>
+        listeningActivity1('moon');
+    </script>
 </body>
 
 </html>

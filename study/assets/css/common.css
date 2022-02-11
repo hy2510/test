@@ -270,6 +270,15 @@ input:focus {
     border-radius: 10px;
 }
 
+.bg-item-w {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
 /* 폼 스타일 */
 
 .form-check {

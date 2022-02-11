@@ -296,68 +296,44 @@ $('#popup').html(`
                             Background
                         </div>
                         <div class="d-flex justify-content-between mb-3">
-                            <a href="">
-                                <div class="bg-item bg-warm">
-                                    <div class="bg-check ckecked"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-red">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-yellow">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-green">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-blue">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-purple">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
+                            <div class="bg-item bg-warm">
+                                <div class="bg-check ckecked"></div>
+                            </div>
+                            <div class="bg-item bg-red">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-yellow">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-green">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-blue">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-purple">
+                                <div class="bg-check"></div>
+                            </div>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <a href="">
-                                <div class="bg-item bg-study">
-                                    <div class="bg-check ckecked"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-wood">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-work">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-geometry">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-doddles">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item bg-dot">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
+                            <div class="bg-item bg-study">
+                                <div class="bg-check ckecked"></div>
+                            </div>    
+                            <div class="bg-item bg-wood">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-work">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-geometry">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-doddles">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item bg-dot">
+                                <div class="bg-check"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="style-info mb-3">
@@ -365,36 +341,24 @@ $('#popup').html(`
                             Window
                         </div>
                         <div class="d-flex justify-content-between">
-                            <a href="">
-                                <div class="bg-item basic">
-                                    <div class="bg-check ckecked"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item space">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item grass">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item night-sky">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item table">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="bg-item wood">
-                                    <div class="bg-check"></div>
-                                </div>
-                            </a>
+                            <div class="bg-item-w basic">
+                                <div class="bg-check ckecked"></div>
+                            </div>
+                            <div class="bg-item-w space">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item-w grass">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item-w night-sky">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item-w table2">
+                                <div class="bg-check"></div>
+                            </div>
+                            <div class="bg-item-w wood">
+                                <div class="bg-check"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -685,3 +649,72 @@ $('.btn-sound').on('click', function () {
     오디오소스.play();
     setTimeout(사운드재생중지, 오디오소스.duration * 1000);
 });
+
+// 배경고르기
+$('.bg-item').on('click', function () {
+    let 선택한배경;
+    선택한배경 = event.currentTarget.className;
+    $('#Main').removeClass();
+    $('#Main').addClass('main-container')
+    $('.main-container').addClass(선택한배경);
+    $('.main-container').removeClass('bg-item');
+});
+
+// 윈도우배경고르기
+$('.bg-item-w').on('click', function () {
+    let 선택한배경2;
+    선택한배경2 = event.currentTarget.className;
+    $('#Quiz').removeClass();
+    $('#Quiz').addClass('quiz-container')
+    $('.quiz-container').addClass(선택한배경2);
+    $('.quiz-container').removeClass('bg-item-w');
+});
+
+// 답 선택후 정답 효과
+function 정답체크효과() {
+    정답오디오.play();
+    모달배경.addClass('active');
+    $('.reading-unit.correct').addClass('active');
+    setTimeout(() => {
+        $('.reading-unit.correct').addClass('done')
+    }, 1200);
+    setTimeout(() => {
+        답체크종료();
+        정답오디오.load();
+    }, 2000);
+};
+
+function 오답체크효과() {
+    오답오디오.play();
+    모달배경.addClass('active');
+    $('.reading-unit.incorrect').addClass('active');
+    setTimeout(() => {
+        $('.reading-unit.incorrect').addClass('done')
+    }, 1000);
+    setTimeout(() => {
+        답체크종료();
+        오답오디오.load();
+    }, 1600);
+    setTimeout(() => {
+        하트차감();
+    }, 1670);
+};
+
+function 답체크종료() {
+    모달배경.removeClass('active');
+    $('.reading-unit.correct').removeClass('active');
+    $('.reading-unit.correct').removeClass('done')
+    $('.reading-unit.incorrect').removeClass('active');
+    $('.reading-unit.incorrect').removeClass('done')
+};
+
+// Listening Activity 1 정오답 체크
+function listeningActivity1(정답) {
+    $('.quiz-answer').on('click', function () {
+        if (정답 == event.currentTarget.querySelector('.word').innerText) {
+            정답체크효과();
+        } else {
+            오답체크효과();
+        };
+    });
+};

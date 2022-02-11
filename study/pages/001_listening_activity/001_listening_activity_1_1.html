@@ -15,12 +15,12 @@
 
 <body>
     <!--! 퀴즈출제 영역 -->
-    <div class="main-container bg-season">
+    <div id="Main" class="main-container bg-season">
         <div class="w-100">
             <!--! 퀴즈타이틀 -->
             <div id="quizTitle"></div>
             <!--! 퀴즈풀기 (- ani-show) -->
-            <div class="quiz-container basic">
+            <div id="Quiz" class="quiz-container basic">
 
 
                 <!--! 퀴즈정보 -->
@@ -141,64 +141,8 @@
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/common_html.js"></script>
     <script>
-        // 답 선택후 정답 효과
-        function 정답체크효과() {
-            정답오디오.play();
-            모달배경.addClass('active');
-            $('.reading-unit.correct').addClass('active');
-            setTimeout(() => {
-                $('.reading-unit.correct').addClass('done')
-            }, 1200);
-            setTimeout(() => {
-                답체크종료();
-                정답오디오.load();
-            }, 2000);
-        }
-
-        function 오답체크효과() {
-            오답오디오.play();
-            모달배경.addClass('active');
-            $('.reading-unit.incorrect').addClass('active');
-            setTimeout(() => {
-                $('.reading-unit.incorrect').addClass('done')
-            }, 1000);
-            setTimeout(() => {
-                답체크종료();
-                오답오디오.load();
-            }, 1600);
-            setTimeout(() => {
-                하트차감();
-            }, 1670);
-        }
-
-        function 답체크종료() {
-            모달배경.removeClass('active');
-            $('.reading-unit.correct').removeClass('active');
-            $('.reading-unit.correct').removeClass('done')
-            $('.reading-unit.incorrect').removeClass('active');
-            $('.reading-unit.incorrect').removeClass('done')
-        }
-
         // 정오답 찍기 테스트
-        let 정답 = 'moon'
-        check();
-
-        function check() {
-            $('.quiz-answer').on('click', function () {
-                if (정답 == event.currentTarget.querySelector('.word').innerText) {
-                    정답체크효과();
-                } else {
-                    오답체크효과();
-                }
-            })
-        };
-
-
-
-        // let 답은 = event.currentTarget.querySelector('.word').innerText;
-        // function check(e) {
-        //     alert("ID : " + document.getElementById(e.getAttribute('id')).getAttribute('id'));
-        // }
+        listeningActivity1('moon')
     </script>
 </body>
 
