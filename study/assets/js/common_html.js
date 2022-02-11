@@ -363,7 +363,7 @@ $('#popup').html(`
                     </div>
                 </div>
                 <div>
-                    <button class="btn btn-primary w-100">Save</button>
+                    <button class="btn modal-save btn-primary w-100">Save</button>
                 </div>
             </div>
         </div>
@@ -634,6 +634,13 @@ $('.book-info').on('click', function () {
 
 // 모달 닫기
 $('.modal-delete').on('click', function () {
+    팝업오디오.load();
+    모달배경.removeClass('active');
+    $('.edit-window').removeClass('active');
+    $('.study-info').removeClass('active');
+});
+
+$('.modal-save').on('click', function () {
     팝업오디오.load();
     모달배경.removeClass('active');
     $('.edit-window').removeClass('active');
