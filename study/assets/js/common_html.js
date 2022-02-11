@@ -627,14 +627,16 @@ $('#seasonTheme').html(`
 	</div>
 `)
 
+
 // 효과음
 let 효과음 = {
     정답: '../../assets/audio/answer_correct.mp3',
-    오답: '../../assets/audio/answer_incorrect.mp31',
+    오답: '../../assets/audio/answer_incorrect.mp3',
     리뷰: 1,
     넥스트: 1,
     팝업: '../../assets/audio/pop2.mp3',
 }
+
 
 // 문제를 틀렸을 때 하트차감 효과
 let 하트갯수 = $('.heart').length;
@@ -646,7 +648,9 @@ function 하트차감() {
 
 // 모달
 let 모달배경 = $('.item-container');
-let 팝업오디오 = new Audio(효과음.팝업)
+let 팝업오디오 = new Audio(효과음.팝업);
+let 정답오디오 = new Audio(효과음.정답);
+let 오답오디오 = new Audio(효과음.오답);
 
 // 테마변경모달 실행
 $('.setting').on('click', function () {

@@ -53,9 +53,8 @@
                             </svg>
                         </div>
                     </div>
-                    <script>
 
-                    </script>
+
                     <div class="right d-flex">
                         <!--! 꾸미기 실행 -->
                         <div class="setting">
@@ -90,32 +89,39 @@
                     <div class="listening-activity-choose col-12">
                         <div class="box">
                             <div class="item col-6 col-md-4">
-                                <!--! 정답인 경우 (- correct) (img - opacity-1) -->
+                                <!--! 정답, 오답체크 (- correct, incorrect) (img - opacity-1) -->
                                 <div class="quiz-answer correct"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/fly.png" alt=""
                                         class="opacity-1">
-                                    <div class="word"><span>fly</span></div>
+                                    <div id="ex01" class="word">fly</div>
                                 </div>
                             </div>
                             <div class="item col-6 col-md-4">
-                                <!--! 오답인 경우 (- incorrect) -->
-                                <div class="quiz-answer incorrect"><img
+                                <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/alien.png"
-                                        alt=""></div>
+                                        alt="">
+                                    <div id="ex02" class="word d-none">alien</div>
+                                </div>
+
                             </div>
                             <div class="item col-6 col-md-4">
                                 <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/star.png"
-                                        alt=""></div>
+                                        alt="">
+                                    <div id="ex03" class="word d-none">star</div>
+                                </div>
                             </div>
                             <div class="item col-6 col-md-4">
                                 <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/moon.png"
-                                        alt=""></div>
+                                        alt="">
+                                    <div id="ex04" class="word d-none">moon</div>
+                                </div>
                             </div>
                             <div class="item col-6 col-md-4">
                                 <div class="quiz-answer"><img
                                         src="https://wcfresource.a1edu.com/newsystem/image/br/eb/ka-099/sun.png" alt="">
+                                    <div id="ex05" class="word d-none">sun</div>
                                 </div>
                             </div>
                         </div>
@@ -126,12 +132,6 @@
             <div id="quizScore"></div>
         </div>
     </div>
-
-    <!-- 오디오 -->
-    <div id="quizAudio">
-        <audio id="audio" type="audio/mpeg" src="https://wcfresource.a1edu.com/newsystem/sound/words/moon.mp3"></audio>
-    </div>
-
     <!--! 각종팝업 -->
     <div id="popup"></div>
     <!--! 시즌테마 -->
@@ -141,51 +141,64 @@
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <script src="../../assets/js/common_html.js"></script>
     <script>
-        // 문제를 틀렸을 때 하트차감 애니메이션 효과 실행
-        let 하트갯수 = $('.heart').length;
-
-        function 하트차감() {
-            $('.heart').eq(하트갯수 - 1).addClass('delete');
-            하트갯수 = 하트갯수 - 1;
-        };
-
-        // 모달
-        let 모달배경 = $('.item-container');
-        let 팝업오디오 = new Audio(효과음.팝업)
-
-        // 테마변경모달 실행
-        $('.setting').on('click', function () {
-            팝업오디오.play();
+        // 답 선택후 정답 효과
+        function 정답체크효과() {
+            정답오디오.play();
             모달배경.addClass('active');
-            $('.edit-window').addClass('active');
-        });
+            $('.reading-unit.correct').addClass('active');
+            setTimeout(() => {
+                $('.reading-unit.correct').addClass('done')
+            }, 1200);
+            setTimeout(() => {
+                답체크종료();
+                정답오디오.load();
+            }, 2000);
+        }
 
-        // 학습정보모달실행
-        $('.book-info').on('click', function () {
-            팝업오디오.play();
+        function 오답체크효과() {
+            오답오디오.play();
             모달배경.addClass('active');
-            $('.study-info').addClass('active')
-        });
+            $('.reading-unit.incorrect').addClass('active');
+            setTimeout(() => {
+                $('.reading-unit.incorrect').addClass('done')
+            }, 1000);
+            setTimeout(() => {
+                답체크종료();
+                오답오디오.load();
+            }, 1600);
+            setTimeout(() => {
+                하트차감();
+            }, 1670);
+        }
 
-        // 스터디인포 관련 모달 닫기
-        $('.modal-delete').on('click', function () {
-            팝업오디오.load();
+        function 답체크종료() {
             모달배경.removeClass('active');
-            $('.edit-window').removeClass('active');
-            $('.study-info').removeClass('active');
-        });
+            $('.reading-unit.correct').removeClass('active');
+            $('.reading-unit.correct').removeClass('done')
+            $('.reading-unit.incorrect').removeClass('active');
+            $('.reading-unit.incorrect').removeClass('done')
+        }
 
-        // 사운드버튼 재생 및 효과
-        let 오디오파일 = 'https://wcfresource.a1edu.com/newsystem/sound/words/moon.mp3';
-        let 오디오소스 = new Audio(오디오파일);
-        let 사운드재생중지 = function () {
-            $('.btn-sound').removeClass('active')
+        // 정오답 찍기 테스트
+        let 정답 = 'moon'
+        check();
+
+        function check() {
+            $('.quiz-answer').on('click', function () {
+                if (정답 == event.currentTarget.querySelector('.word').innerText) {
+                    정답체크효과();
+                } else {
+                    오답체크효과();
+                }
+            })
         };
-        $('.btn-sound').on('click', function () {
-            $('.btn-sound').addClass('active');
-            오디오소스.play();
-            setTimeout(사운드재생중지, 오디오소스.duration * 1000);
-        });
+
+
+
+        // let 답은 = event.currentTarget.querySelector('.word').innerText;
+        // function check(e) {
+        //     alert("ID : " + document.getElementById(e.getAttribute('id')).getAttribute('id'));
+        // }
     </script>
 </body>
 
