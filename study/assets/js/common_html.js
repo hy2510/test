@@ -661,6 +661,9 @@ $('.bg-item').on('click', function () {
     $('#Main').addClass('main-container')
     $('.main-container').addClass(선택한배경);
     $('.main-container').removeClass('bg-item');
+    setTimeout(() => {
+        팝업오디오2.load();
+    }, 500);
 });
 
 // 윈도우배경고르기
@@ -672,6 +675,9 @@ $('.bg-item-w').on('click', function () {
     $('#Quiz').addClass('quiz-container')
     $('.quiz-container').addClass(선택한배경2);
     $('.quiz-container').removeClass('bg-item-w');
+    setTimeout(() => {
+        팝업오디오2.load();
+    }, 500);
 });
 
 // 답 선택후 정답 효과
