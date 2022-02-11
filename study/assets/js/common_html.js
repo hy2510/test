@@ -599,6 +599,7 @@ let 효과음 = {
     리뷰: 1,
     넥스트: 1,
     팝업: '../../assets/audio/pop2.mp3',
+    팝업2: '../../assets/audio/pop.mp3'
 }
 
 
@@ -613,6 +614,7 @@ function 하트차감() {
 // 모달
 let 모달배경 = $('.item-container');
 let 팝업오디오 = new Audio(효과음.팝업);
+let 팝업오디오2 = new Audio(효과음.팝업2);
 let 정답오디오 = new Audio(효과음.정답);
 let 오답오디오 = new Audio(효과음.오답);
 
@@ -652,6 +654,7 @@ $('.btn-sound').on('click', function () {
 
 // 배경고르기
 $('.bg-item').on('click', function () {
+    팝업오디오2.play();
     let 선택한배경;
     선택한배경 = event.currentTarget.className;
     $('#Main').removeClass();
@@ -662,6 +665,7 @@ $('.bg-item').on('click', function () {
 
 // 윈도우배경고르기
 $('.bg-item-w').on('click', function () {
+    팝업오디오2.play();
     let 선택한배경2;
     선택한배경2 = event.currentTarget.className;
     $('#Quiz').removeClass();
