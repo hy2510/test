@@ -898,22 +898,15 @@ input:focus {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100vh;
     z-index: 9999999;
 }
 
 .item-container.active.result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999999;
-    background-color: #000000ce;
-    -webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: AnimationName 15s ease infinite;
 }
 
 .reading-unit.correct,
@@ -2632,4 +2625,71 @@ input:focus {
 
 .modal-delete {
     cursor: pointer;
+}
+
+.total-result {
+    display: none;
+}
+
+.total-result.active {
+    display: block !important;
+    text-align: center;
+}
+
+.total-result .title {
+    font-size: 48px;
+    color: #ffffff;
+    font-family: baloo thambi;
+}
+
+.total-result .total-score {
+    color: #ffffff;
+    font-family: baloo thambi;
+}
+
+.total-result .total-score .first {
+    font-size: 30px;
+}
+
+.total-result .total-score .last {
+    font-size: 20px;
+}
+
+.total-result .point {
+    font-size: 44px;
+    font-weight: 600;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ECC245;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.total-result .reading-uinit {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    right: -68px;
+}
+
+.total-result .comment {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn.btn-result-ok {
+    background-color: rgba(255, 255, 255, 0.2);
+    min-width: 200px;
+    border-radius: 100px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
 }
