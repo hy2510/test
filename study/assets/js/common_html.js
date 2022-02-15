@@ -559,6 +559,23 @@ $('#popup').html(`
                 </div>
             </div>
         </div>
+        
+        <!-- Good Job (- active)-->
+        <div class="total-result">
+            <div class="title">Good Job!</div>
+            <div class="total-score"><span class="first">100</span><span class="last">/100</span></div>
+            <div class="position-relative">
+                <div class="point">99.99</div>
+                <img src="https://wcfresource.a1edu.com/newsystem/image/character/subcharacter/chello_15.png" alt=""
+                    class="reading-uinit">
+            </div>
+            <div class="comment">Points achived!</div>
+            <div class="my-3">
+                <button id="playMe" class="btn btn-result-ok">OK</button>
+            </div>
+            <audio src="../../assets/audio/total_pass.mp3" allow='autoplay'></audio>
+        </div>
+
     </div>
 `)
 
@@ -599,9 +616,17 @@ let 효과음 = {
     리뷰: 1,
     넥스트: 1,
     팝업: '../../assets/audio/pop2.mp3',
-    팝업2: '../../assets/audio/pop.mp3'
+    팝업2: '../../assets/audio/pop.mp3',
+    testresult: '../../assets/audio/step_result.mp3',
+    goodjob: '../../assets/audio/total_pass.mp3'
 }
 
+let 팝업오디오 = new Audio(효과음.팝업);
+let 팝업오디오2 = new Audio(효과음.팝업2);
+let 정답오디오 = new Audio(효과음.정답);
+let 오답오디오 = new Audio(효과음.오답);
+let testResultAudio = new Audio(효과음.testresult);
+let goodJobAudio = new Audio(효과음.goodjob);
 
 // 문제를 틀렸을 때 하트차감 효과
 let 하트갯수 = $('.heart').length;
@@ -613,10 +638,7 @@ function 하트차감() {
 
 // 모달
 let 모달배경 = $('.item-container');
-let 팝업오디오 = new Audio(효과음.팝업);
-let 팝업오디오2 = new Audio(효과음.팝업2);
-let 정답오디오 = new Audio(효과음.정답);
-let 오답오디오 = new Audio(효과음.오답);
+
 
 // 테마변경모달 실행
 $('.setting').on('click', function () {
@@ -735,3 +757,16 @@ function listeningActivity1(정답) {
         };
     });
 };
+
+function testResult() {
+    $('.item-container').addClass('active')
+    $('.test-result').addClass('active')
+    testResultAudio.play()
+}
+
+function goodJob() {
+    $('.item-container').addClass('active')
+    $('.item-container').addClass('result')
+    $('.total-result').addClass('active')
+    goodJobAudio.play()
+}
