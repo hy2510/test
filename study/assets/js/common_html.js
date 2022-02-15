@@ -555,7 +555,7 @@ $('#popup').html(`
                     <hr>
                 </div>
                 <div>
-                    <button class="btn btn-primary w-100">Next</button>
+                    <button class="btn btn-primary w-100" onclick="nextButton()">Next</button>
                 </div>
             </div>
         </div>
@@ -614,7 +614,7 @@ let 효과음 = {
     정답: '../../assets/audio/answer_correct.mp3',
     오답: '../../assets/audio/answer_incorrect.mp3',
     리뷰: 1,
-    넥스트: 1,
+    넥스트: '../../assets/audio/next.mp3',
     팝업: '../../assets/audio/pop2.mp3',
     팝업2: '../../assets/audio/pop.mp3',
     testresult: '../../assets/audio/step_result.mp3',
@@ -625,6 +625,7 @@ let 팝업오디오 = new Audio(효과음.팝업);
 let 팝업오디오2 = new Audio(효과음.팝업2);
 let 정답오디오 = new Audio(효과음.정답);
 let 오답오디오 = new Audio(효과음.오답);
+let nextAudio = new Audio(효과음.넥스트)
 let testResultAudio = new Audio(효과음.testresult);
 let goodJobAudio = new Audio(효과음.goodjob);
 
@@ -762,6 +763,10 @@ function testResult() {
     $('.item-container').addClass('active')
     $('.test-result').addClass('active')
     testResultAudio.play()
+}
+
+function nextButton() {
+    nextAudio.play()
 }
 
 function goodJob() {
